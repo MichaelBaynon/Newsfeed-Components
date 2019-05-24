@@ -1,4 +1,4 @@
-# Newsfeed-Components
+﻿# Newsfeed-Components
 
 In this project we are going to be building a news feed reader. The goal is to have a collapsing menu, and expandable news articles. The HTML and CSS is already done for you, you simply need to connect the pieces. After the CSS is connected it is time to move on to building out our components using JavaScript. We will be adding common functionality and styling to build reusable components.
 
@@ -78,3 +78,5 @@ Note: Just a reminder the stretch goals are just extra practice using the tools 
   Create a function that builds Article components. You are not expected to finish this. This goal is simply an exercise in thinking about how you would implement a function that took some data, created a new Article from it, and appended it to the HTML (without actually writing anything in the HTML file). This is a difficult concept to undertake, but even thinking about how you would implement it will give you a better understanding of how we use frameworks in upcoming sprints. 
 
 * Implement a way to write your own articles using the Component Constructor and some input fields. 
+
+:)
