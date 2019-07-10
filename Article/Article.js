@@ -106,29 +106,49 @@ const data = [
 
 const articles = document.querySelector('.articles')
 
-articles.appendChild(createComponent('i love alicia'))
+data.forEach(data => {
+  console.log(data.date, data.title, data.firstParagraph, data.secondParagraph, data.thirdParagraph)
+   articles.appendChild(createComponent(data.date, data.title, data.firstParagraph, data.secondParagraph, data.thirdParagraph))
+})
+// articles.appendChild(createComponent())
 
 function createComponent(title, date, firstParagraph, secondParagraph, thirdParagraph) {
   const article = document.createElement('div')
   const articleTitle = document.createElement('h2');
   const articleDate = document.createElement('p');
-  const paragraph = document.createElement('p')
+  const p1 = document.createElement('p')
+  const p2 = document.createElement('p')
+  const p3 = document.createElement('p')
   const expandButton = document.createElement('span')
 
 
 article.appendChild(articleTitle)
 article.appendChild(articleDate)
-article.appendChild(paragraph)
+article.appendChild(p1)
+article.appendChild(p2)
+article.appendChild(p3)
 article.appendChild(expandButton)
 
 article.classList.add('article')
 articleDate.classList.add('article-date')
-expandButton.classList.add('expand-button')
+expandButton.classList.add('expandButton')
 
 expandButton.textContent = 'Open'
 articleDate.textContent = date
 articleTitle.textContent = title
-paragraph.textContent = firstParagraph
+p1.textContent = firstParagraph
+p2.textContent = secondParagraph
+p3.textContent = thirdParagraph
+
+expandButton.addEventListener('click', event => {
+  console.log('button clicked', event.target)
+
+  article.classList.toggle('article-open')
+
+article.classList.toggle('date')
+})
+
+
 
 return article
 }
